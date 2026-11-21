@@ -108,21 +108,18 @@ class ReferenceControl:
     def average_acquisition(self, wavelength, intensites):
         self.sum_wavelengths.append(wavelength)
         self.sum_intensities.append(intensites)
-
+        
+        try:
+            # hitung rata-rata setiap akuisisi
+            self.current_intensities = np.mean(self.sum_intensities, axis =0)
+            self.current_wavelengths = np.mean(self.sum_wavelengths, axis =0)
+        
+        except:
+            pass
+        
+        # reset buffer ketika sudah penuh
         if len(self.sum_intensities) >= self.average:
-            try:
-                # apabila belum memenuhi batas self.average dan ganti rentang panjang gelombang, maka wavelength akan berbeda
-                self.current_intensities = np.mean(self.sum_intensities, axis=0)
-            except:
-                pass
             self.sum_intensities.clear()
-
-        if len(self.sum_wavelengths) >= self.average:
-            try:
-                # apabila belum memenuhi batas self.average dan ganti rentang panjang gelombang, maka wavelength akan berbeda
-                self.current_wavelengths = np.mean(self.sum_wavelengths, axis=0)
-            except:
-                pass
             self.sum_wavelengths.clear()
         
     def acquisition_average_change(self, slot_average_value):
