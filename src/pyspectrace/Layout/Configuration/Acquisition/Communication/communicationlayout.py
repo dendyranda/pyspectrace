@@ -66,7 +66,7 @@ class CommunicationLayout(QWidget):
         return self.acquisitiondelay_button
     
     def AcquisitionAverage(self):
-        acquisitionaverage_label = QLabel("Acquisition average :", self)
+        acquisitionaverage_label = QLabel("Acquisition average:", self)
         self.acquisitionaverage_spinbox = QSpinBox(self)
         self.acquisitionaverage_spinbox.setRange(1, 100)  # Smilisecound
         self.acquisitionaverage_spinbox.setValue(1)  # Set default value
