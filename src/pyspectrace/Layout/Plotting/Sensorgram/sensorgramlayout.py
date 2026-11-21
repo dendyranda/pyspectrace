@@ -154,7 +154,7 @@ class SensorgramLayout(pg.GraphicsLayoutWidget):
 
         for i in range(len(self.num_polynomialshiftpeakwidth)):
             self.bundle_plot_list[index] = ([(np.array([]), np.array([])), 
-                                            bundle_kwargs(self.color_polynomialshiftpeakwidth[i], 2, pg.QtCore.Qt.SolidLine, f"{self.name_polynomialpeakwidthfitting[i]} (Gaussian)")])
+                                            bundle_kwargs(self.color_polynomialshiftpeakwidth[i], 2, pg.QtCore.Qt.SolidLine, f"{self.name_polynomialpeakwidthfitting[i]} (Polynomial)")])
             index += 1
 
         if len(self.invisible_plot) < (total_plot_init):
