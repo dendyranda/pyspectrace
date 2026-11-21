@@ -222,11 +222,11 @@ class SpectrumLayout(pg.PlotWidget):
 
         for i in range(len(self.num_gaussianpeakwidthfitting)):
             self.bundle_plot_list[index] = ([(np.array([]), np.array([])), 
-                                            bundle_kwargs(self.color_gaussianshiftpeakwidth[i], 2, pg.QtCore.Qt.SolidLine, f"{self.name_gaussianpeakwidthfitting[i]} Lorentzian Peak Width Shift")])
+                                            bundle_kwargs(self.color_gaussianshiftpeakwidth[i], 2, pg.QtCore.Qt.SolidLine, f"{self.name_gaussianpeakwidthfitting[i]} Gaussian Peak Width Shift")])
             index += 1
         for i in range(len(self.num_gaussianshiftpeakwidth)):
             self.bundle_plot_list[index] = ([(np.array([]), np.array([])), 
-                                            bundle_kwargs(self.color_gaussianpeakwidthfitting[i], 2, pg.QtCore.Qt.DashLine, f"{self.name_gaussianpeakwidthfitting[i]} Lorentzian Peak Width Fitting")])
+                                            bundle_kwargs(self.color_gaussianpeakwidthfitting[i], 2, pg.QtCore.Qt.DashLine, f"{self.name_gaussianpeakwidthfitting[i]} Gaussian Peak Width Fitting")])
             index += 1
 
 
